@@ -3,7 +3,9 @@
 
 !/scss
 !/css
+!/js
 !.gitignore
 !*.html
 !*.scss
 !*.css
+!*.js
