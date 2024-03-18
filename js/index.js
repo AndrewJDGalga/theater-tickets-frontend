@@ -8,6 +8,6 @@ window.onload = () =>{
     }
     */
    const seat = document.createElement('button');
-   //seat.classList.add('');
+   seat.classList.add('theater-seat');
    seatHost.append(seat);
 }

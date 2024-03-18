@@ -3,3 +3,23 @@ $toy-blue: #92D5E6;
 $light-green: #A1EF8B;
 $english-violet: #48435C;
 $charcol: #3E505B;
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.theater{
+    width: 50%;
+    height: 50%;
+
+    .theater--seats {
+        width: 100%;
+        height: 100%;
+    }
+    .theater-seat {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+    }
+}
