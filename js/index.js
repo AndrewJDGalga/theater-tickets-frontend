@@ -1,0 +1,1 @@
+const seatHost = document.querySelector('#theater--seats_host');
