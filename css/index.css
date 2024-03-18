@@ -7,14 +7,18 @@ html, body {
   width: 50%;
   height: 50%;
 }
-.theater .theater--seats {
+.theater .theater--seats,
+.theater .theater--seat {
   width: 100%;
   height: 100%;
 }
-.theater .theater-seat {
+.theater .theater--seats {
+  display: grid;
+  grid-template-columns: repeat(6, 20px);
+  grid-template-rows: repeat(11, 20px);
+}
+.theater .theater--seat {
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
 }
 
 /*# sourceMappingURL=index.css.map */
