@@ -3,6 +3,14 @@ html, body {
   height: 100%;
 }
 
+.double-em {
+  font-size: 2em;
+}
+
+.one-em {
+  font-size: 1em;
+}
+
 .theater {
   width: 100%;
   height: 100%;
@@ -23,7 +31,6 @@ html, body {
   width: 2em;
   height: 2em;
   margin: auto auto;
-  /*display: inline-block;*/
 }
 
 /*# sourceMappingURL=index.css.map */
