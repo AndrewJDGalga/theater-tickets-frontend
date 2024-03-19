@@ -4,8 +4,8 @@ $light-green: #A1EF8B;
 $english-violet: #48435C;
 $charcol: #3E505B;
 
-$theater-row: 11;
-$theater-col: 6;
+$theater-row: 6;
+$theater-col: 11;
 
 html, body {
     margin: 0;
@@ -13,20 +13,26 @@ html, body {
 }
 
 .theater{
-    width: 50%;
-    height: 50%;
-    
-    .theater--seats,
-    .theater--seat {
-        width: 100%;
-        height: 100%;
+    width: 100%;
+    height: 100%;
+
+    .theater--screen--seats {
+        /*margin: 4px;*/
     }
     .theater--seats {
+        width: 100%;
+        height: 100%;
+
         display: grid;
-        grid-template-columns: repeat($theater-col, 20px);
-        grid-template-rows: repeat($theater-row, 20px);
+        grid-template-columns: repeat($theater-col, 2em);
+        grid-template-rows: repeat($theater-row, 2em);
+        gap: calc(1em/4);
     }
     .theater--seat {
         border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        margin: auto auto;
+        /*display: inline-block;*/
     }
 }
