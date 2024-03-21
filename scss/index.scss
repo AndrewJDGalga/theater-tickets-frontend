@@ -64,11 +64,13 @@ html, body {
         margin: auto auto;
     }
     .theater--seat--popup {
+        display: none;
         position: absolute;
         padding: 8px;
-        top: -32px;
-        left: -8px;
+        top: -200%;
+        left: -100%;
         border: 1px solid grey;
         border-radius: 8px;
+        width: 200%;
     }
 }

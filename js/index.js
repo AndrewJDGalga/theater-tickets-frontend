@@ -26,6 +26,7 @@ const genSeats = ({seatClass, column, row})=>{
             
             seat.onclick = () => {
                 console.log(`Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`);
+                popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
             }
 
             seatsFrag.append(seat);
