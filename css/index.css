@@ -13,7 +13,9 @@ html, body {
 
 .theater {
   width: 100%;
-  height: 100%;
+  height: 50%;
+  background-color: black;
+  overflow: auto;
 }
 .theater #theater--zoom {
   font-size: 1.5rem;
@@ -21,9 +23,15 @@ html, body {
   min-width: 48px;
   min-height: 48px;
 }
+.theater .theater--screen--seats {
+  overflow: auto;
+}
 .theater .theater--seats {
-  width: 100%;
-  height: 100%;
+  /*width: 100%;
+  height: 100%;*/
+  width: fit-content;
+  margin: 0 auto;
+  background-color: pink;
   display: grid;
   grid-template-columns: repeat(11, 2em);
   grid-template-rows: repeat(6, 2em);
