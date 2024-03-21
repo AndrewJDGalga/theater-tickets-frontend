@@ -21,5 +21,6 @@ window.onload = () =>{
         for(let child of seatHost.children){
             child.classList.toggle('one-em');
         }
+        (zoomBtn.innerText == '+') ? zoomBtn.innerText = '-' : zoomBtn.innerText = '+';
     }
 }
