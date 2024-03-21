@@ -63,11 +63,9 @@ html, body {
         height: 2em;
         margin: auto auto;
     }
-    .theater--seat::before {
+    .theater--seat--popup {
         position: absolute;
-        content: 'Test';
         padding: 8px;
-        /*background-color: black;*/
         top: -32px;
         left: -8px;
         border: 1px solid grey;
