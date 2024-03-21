@@ -1,30 +1,25 @@
 const seatHost = document.querySelector('#theater--seats_host');
 const zoomBtn = document.querySelector('#theater--zoom');
 
-const seatCount = 66;
+//const seatCount = 66;
 
 const seatCol = 11;
 const seatRow = 6;
 
 const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J'];
 
-const genSeats = ({numSeats, seatClass})=>{
+const genSeats = ({seatClass, column, row})=>{
     const seatsFrag = document.createDocumentFragment();
-    for(let y = 0; y < seatRow; y++){
+    for(let y = 0; y < row; y++){
         let col = rows[y];
-        for(let x = 0; x < seatCol; x++){
+        for(let x = 0; x < column; x++){
             const seat = document.createElement('button');
             seat.classList.add(seatClass);
+            seat.dataset.seatRow = x+1;
+            seat.dataset.seatCol = col;
             seatsFrag.append(seat);
         }
     }
-    /*
-    for(let i = 0; i < numSeats; i++) {
-        const seat = document.createElement('button');
-        seat.classList.add(seatClass);
-        //seat.dataset.row = 
-        seatsFrag.append(seat);
-    }*/
     return seatsFrag;
 }
 
@@ -33,7 +28,7 @@ window.onload = () =>{
     root.style.setProperty('--theater-row', seatRow.toString());
     root.style.setProperty('--theater-col', seatCol.toString());
 
-    seatHost.append(genSeats({numSeats:seatCount, seatClass:'theater--seat'}));
+    seatHost.append(genSeats({seatClass:'theater--seat', column:seatCol, row:seatRow}));
 
     zoomBtn.onclick = () => {
         seatHost.classList.toggle('double-em');
