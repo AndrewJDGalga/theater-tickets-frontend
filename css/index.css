@@ -3,8 +3,8 @@ $theater-row: 6;
 $theater-col: 11;
 */
 :root {
-  --theater-row: 6;
-  --theater-col: 11;
+  --theater-row: 0;
+  --theater-col: 0;
 }
 
 html, body {

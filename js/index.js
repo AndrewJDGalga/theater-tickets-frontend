@@ -29,6 +29,10 @@ const genSeats = ({numSeats, seatClass})=>{
 }
 
 window.onload = () =>{
+    const root = document.querySelector(':root');
+    root.style.setProperty('--theater-row', seatRow.toString());
+    root.style.setProperty('--theater-col', seatCol.toString());
+
     seatHost.append(genSeats({numSeats:seatCount, seatClass:'theater--seat'}));
 
     zoomBtn.onclick = () => {
