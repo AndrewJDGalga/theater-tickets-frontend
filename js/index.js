@@ -17,6 +17,16 @@ const genSeats = ({seatClass, column, row})=>{
             seat.classList.add(seatClass);
             seat.dataset.seatRow = x+1;
             seat.dataset.seatCol = col;
+
+            /*
+            const popup = document.createElement('div');
+            popup.innerText = `Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`;
+            */
+            
+            seat.onclick = () => {
+                console.log(`Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`);
+            }
+
             seatsFrag.append(seat);
         }
     }

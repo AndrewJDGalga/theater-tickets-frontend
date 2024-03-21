@@ -57,9 +57,20 @@ html, body {
         gap: calc(1em/4);
     }
     .theater--seat {
+        position: relative;
         border-radius: 50%;
         width: 2em;
         height: 2em;
         margin: auto auto;
+    }
+    .theater--seat::before {
+        position: absolute;
+        content: 'Test';
+        padding: 8px;
+        /*background-color: black;*/
+        top: -32px;
+        left: -8px;
+        border: 1px solid grey;
+        border-radius: 8px;
     }
 }
