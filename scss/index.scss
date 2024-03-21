@@ -4,8 +4,15 @@ $light-green: #A1EF8B;
 $english-violet: #48435C;
 $charcol: #3E505B;
 
+/*
 $theater-row: 6;
 $theater-col: 11;
+*/
+
+:root {
+    --theater-row: 6;
+    --theater-col: 11;
+}
 
 html, body {
     margin: 0;
@@ -50,8 +57,8 @@ html, body {
         background-color: pink;
 
         display: grid;
-        grid-template-columns: repeat($theater-col, 2em);
-        grid-template-rows: repeat($theater-row, 2em);
+        grid-template-columns: repeat(var(--theater-col), 2em);
+        grid-template-rows: repeat(var(--theater-row), 2em);
         gap: calc(1em/4);
     }
     .theater--seat {

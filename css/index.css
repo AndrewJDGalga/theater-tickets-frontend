@@ -1,3 +1,12 @@
+/*
+$theater-row: 6;
+$theater-col: 11;
+*/
+:root {
+  --theater-row: 6;
+  --theater-col: 11;
+}
+
 html, body {
   margin: 0;
   height: 100%;
@@ -40,8 +49,8 @@ html, body {
   margin: 0 auto;
   background-color: pink;
   display: grid;
-  grid-template-columns: repeat(11, 2em);
-  grid-template-rows: repeat(6, 2em);
+  grid-template-columns: repeat(var(--theater-col), 2em);
+  grid-template-rows: repeat(var(--theater-row), 2em);
   gap: 0.25em;
 }
 .theater .theater--seat {
