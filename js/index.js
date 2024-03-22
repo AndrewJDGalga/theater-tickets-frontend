@@ -8,6 +8,8 @@ const seatRow = 6;
 
 const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J'];
 
+let activeSeat;
+
 const genSeats = ({seatClass, column, row})=>{
     const seatsFrag = document.createDocumentFragment();
     for(let y = 0; y < row; y++){
@@ -25,8 +27,11 @@ const genSeats = ({seatClass, column, row})=>{
             seat.append(popup);
             
             seat.onclick = () => {
-                console.log(`Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`);
-                popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
+                (activeSeat) && (activeSeat.style.display = 'none');
+                activeSeat = popup;
+                activeSeat.style.display = 'block';
+                //console.log(`Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`);
+                //popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
             }
 
             seatsFrag.append(seat);
