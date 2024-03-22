@@ -7,6 +7,7 @@ $charcol: #3E505B;
 :root {
     --theater-row: 0;
     --theater-col: 0;
+    --popup-width: 4rem;
 }
 
 html, body {
@@ -66,11 +67,12 @@ html, body {
     .theater--seat--popup {
         display: none;
         position: absolute;
+        font-size: 1.2rem;
         padding: 8px;
-        top: -200%;
-        left: -100%;
+        top: calc(-1 * var(--popup-width)*1.2);
+        left: calc(-1 * var(--popup-width)/2);
         border: 1px solid grey;
         border-radius: 8px;
-        width: 200%;
+        width: var(--popup-width);
     }
 }

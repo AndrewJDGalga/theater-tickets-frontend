@@ -18,7 +18,7 @@ const genSeats = ({seatClass, column, row})=>{
             seat.dataset.seatRow = x+1;
             seat.dataset.seatCol = col;
 
-            const popup = document.createElement('div');
+            const popup = document.createElement('p');
             popup.innerText = `Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`;
             popup.classList.add('theater--seat--popup');
 
