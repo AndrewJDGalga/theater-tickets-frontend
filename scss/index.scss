@@ -4,13 +4,18 @@ $light-green: #A1EF8B;
 $english-violet: #48435C;
 $charcol: #3E505B;
 
-@mixin popup_shared {
+@mixin popup_shared($width: var(--popup-width), $fontSize: 1.2rem, $top: calc(-1 * var(--popup-width)*1.2), $left: calc(-1 * var(--popup-width)/2)) {
     border: 1px solid grey;
     border-radius: 8px;
     padding: 8px;
     display: none;
     position: absolute;
     z-index: 1;
+
+    width: $width;
+    left: $left;
+    top: $top;
+    font-size: $fontSize;
 
     color: white;
     background-color: black;
@@ -82,10 +87,13 @@ html, body {
     .theater--seat--popup {
         @include popup_shared();
 
+        /*
         font-size: 1.2rem;
         top: calc(-1 * var(--popup-width)*1.2);
         left: calc(-1 * var(--popup-width)/2);
         width: var(--popup-width);
+        */
+
         /*
         display: none;
         position: absolute;
@@ -103,12 +111,15 @@ html, body {
         */
     }
     .theater--seat--popup--zoom {
-        @include popup_shared();
-
+        @include popup_shared($width: 4rem * 2, $fontSize: 1.5rem, $top: calc(-1 * var(--popup-width)*1.5), $left:calc(-1 * var(--popup-width)/1.5));
+        
+        /*
         font-size: 1.5rem;
         top: calc(-1 * var(--popup-width)*1.5);
         left: calc(-1 * var(--popup-width)/1.5);
         width: 4rem * 2;
+        */
+
         /*
         display: none;
         position: absolute;
