@@ -4,6 +4,18 @@ $light-green: #A1EF8B;
 $english-violet: #48435C;
 $charcol: #3E505B;
 
+@mixin popup_shared {
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 8px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+    color: white;
+    background-color: black;
+}
+
 :root {
     --theater-row: 0;
     --theater-col: 0;
@@ -68,6 +80,13 @@ html, body {
         margin: auto auto;
     }
     .theater--seat--popup {
+        @include popup_shared();
+
+        font-size: 1.2rem;
+        top: calc(-1 * var(--popup-width)*1.2);
+        left: calc(-1 * var(--popup-width)/2);
+        width: var(--popup-width);
+        /*
         display: none;
         position: absolute;
         font-size: 1.2rem;
@@ -81,8 +100,16 @@ html, body {
         color: white;
         background-color: black;
         z-index: 1;
+        */
     }
     .theater--seat--popup--zoom {
+        @include popup_shared();
+
+        font-size: 1.5rem;
+        top: calc(-1 * var(--popup-width)*1.5);
+        left: calc(-1 * var(--popup-width)/1.5);
+        width: 4rem * 2;
+        /*
         display: none;
         position: absolute;
         font-size: 1.5rem;
@@ -96,5 +123,6 @@ html, body {
         color: white;
         background-color: black;
         z-index: 1;
+        */
     }
 }

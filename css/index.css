@@ -61,32 +61,62 @@ html, body {
   margin: auto auto;
 }
 .theater .theater--seat--popup {
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 8px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  background-color: black;
+  font-size: 1.2rem;
+  top: calc(-1 * var(--popup-width) * 1.2);
+  left: calc(-1 * var(--popup-width) / 2);
+  width: var(--popup-width);
+  /*
   display: none;
   position: absolute;
   font-size: 1.2rem;
   padding: 8px;
-  top: calc(-1 * var(--popup-width) * 1.2);
-  left: calc(-1 * var(--popup-width) / 2);
+  top: calc(-1 * var(--popup-width)*1.2);
+  left: calc(-1 * var(--popup-width)/2);
   border: 1px solid grey;
   border-radius: 8px;
   width: var(--popup-width);
+
   color: white;
   background-color: black;
   z-index: 1;
+  */
 }
 .theater .theater--seat--popup--zoom {
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 8px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  color: white;
+  background-color: black;
+  font-size: 1.5rem;
+  top: calc(-1 * var(--popup-width) * 1.5);
+  left: calc(-1 * var(--popup-width) / 1.5);
+  width: 8rem;
+  /*
   display: none;
   position: absolute;
   font-size: 1.5rem;
   padding: 8px;
-  top: calc(-1 * var(--popup-width) * 1.5);
-  left: calc(-1 * var(--popup-width) / 1.5);
+  top: calc(-1 * var(--popup-width)*1.5);
+  left: calc(-1 * var(--popup-width)/1.5);
   border: 1px solid grey;
   border-radius: 8px;
-  width: 8rem;
+  width: 4rem * 2;
+
   color: white;
   background-color: black;
   z-index: 1;
+  */
 }
 
 /*# sourceMappingURL=index.css.map */
