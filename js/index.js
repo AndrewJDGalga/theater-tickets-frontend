@@ -27,10 +27,13 @@ const genSeats = ({seatClass, column, row})=>{
             seat.append(popup);
             
             seat.onclick = () => {
-                (activeSeat) && (activeSeat.style.display = 'none');
-                activeSeat = popup;
-                activeSeat.style.display = 'block';
-                //console.log(`Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`);
+                if(activeSeat !== popup){
+                    (activeSeat) && (activeSeat.style.display = 'none');
+                    activeSeat = popup;
+                    activeSeat.style.display = 'block';
+                } else { 
+                    activeSeat.style.display = (activeSeat.style.display === 'block') ? 'none' : 'block';
+                }
                 //popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
             }
 
@@ -51,6 +54,11 @@ window.onload = () =>{
         seatHost.classList.toggle('double-em');
         for(let child of seatHost.children){
             child.classList.toggle('one-em');
+            /*
+            for(let notice of child.children){
+                notice.classList.toggle('double-em');
+            }
+            */
         }
         (zoomBtn.innerText == '+') ? zoomBtn.innerText = '-' : zoomBtn.innerText = '+';
     }
