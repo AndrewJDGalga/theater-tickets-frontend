@@ -8,7 +8,7 @@ const seatRow = 6;
 
 const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J'];
 
-let activeSeat;
+let activeSeat, activePopup;
 
 const genSeats = ({seatClass, column, row})=>{
     const seatsFrag = document.createDocumentFragment();
@@ -27,12 +27,20 @@ const genSeats = ({seatClass, column, row})=>{
             seat.append(popup);
             
             seat.onclick = () => {
-                if(activeSeat !== popup){
-                    (activeSeat) && (activeSeat.style.display = 'none');
-                    activeSeat = popup;
-                    activeSeat.style.display = 'block';
+                if(activeSeat !== seat){
+                    (activePopup) && (activeSeat.classList.toggle('selected-seat'));
+                    activeSeat = seat;
+                    activeSeat.classList.toggle('selected-seat');
+                } else {
+                    activeSeat.classList.toggle('selected-seat');
+                }
+
+                if(activePopup !== popup){
+                    (activePopup) && (activePopup.style.display = 'none');
+                    activePopup = popup;
+                    activePopup.style.display = 'block';
                 } else { 
-                    activeSeat.style.display = (activeSeat.style.display === 'block') ? 'none' : 'block';
+                    activePopup.style.display = (activePopup.style.display === 'block') ? 'none' : 'block';
                 }
             }
 
@@ -46,8 +54,6 @@ window.onload = () =>{
     const root = document.querySelector(':root');
     root.style.setProperty('--theater-row', seatRow.toString());
     root.style.setProperty('--theater-col', seatCol.toString());
-
-    const box = document.querySelector('.theater--screen--seats');
 
     seatHost.append(genSeats({seatClass:'theater--seat', column:seatCol, row:seatRow}));
 

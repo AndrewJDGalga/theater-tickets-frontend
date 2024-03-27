@@ -84,56 +84,13 @@ html, body {
         height: 2em;
         margin: auto auto;
     }
+    .selected-seat {
+        background-color: black;
+    }
     .theater--seat--popup {
         @include popup_shared();
-
-        /*
-        font-size: 1.2rem;
-        top: calc(-1 * var(--popup-width)*1.2);
-        left: calc(-1 * var(--popup-width)/2);
-        width: var(--popup-width);
-        */
-
-        /*
-        display: none;
-        position: absolute;
-        font-size: 1.2rem;
-        padding: 8px;
-        top: calc(-1 * var(--popup-width)*1.2);
-        left: calc(-1 * var(--popup-width)/2);
-        border: 1px solid grey;
-        border-radius: 8px;
-        width: var(--popup-width);
-
-        color: white;
-        background-color: black;
-        z-index: 1;
-        */
     }
     .theater--seat--popup--zoom {
         @include popup_shared($width: 4rem * 2, $fontSize: 1.5rem, $top: calc(-1 * var(--popup-width)*1.5), $left:calc(-1 * var(--popup-width)/1.5));
-        
-        /*
-        font-size: 1.5rem;
-        top: calc(-1 * var(--popup-width)*1.5);
-        left: calc(-1 * var(--popup-width)/1.5);
-        width: 4rem * 2;
-        */
-
-        /*
-        display: none;
-        position: absolute;
-        font-size: 1.5rem;
-        padding: 8px;
-        top: calc(-1 * var(--popup-width)*1.5);
-        left: calc(-1 * var(--popup-width)/1.5);
-        border: 1px solid grey;
-        border-radius: 8px;
-        width: 4rem * 2;
-
-        color: white;
-        background-color: black;
-        z-index: 1;
-        */
     }
 }
