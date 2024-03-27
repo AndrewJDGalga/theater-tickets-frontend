@@ -50,6 +50,9 @@ html, body {
   grid-template-rows: repeat(var(--theater-row), 2em);
   gap: 0.25em;
 }
+.theater .theater--seats--zoom {
+  margin: 0 2em 0;
+}
 .theater .theater--seat {
   position: relative;
   border-radius: 50%;

@@ -47,19 +47,21 @@ window.onload = () =>{
     root.style.setProperty('--theater-row', seatRow.toString());
     root.style.setProperty('--theater-col', seatCol.toString());
 
+    const box = document.querySelector('.theater--screen--seats');
+
     seatHost.append(genSeats({seatClass:'theater--seat', column:seatCol, row:seatRow}));
 
     zoomBtn.onclick = () => {
         seatHost.classList.toggle('double-em');
+        seatHost.classList.toggle('theater--seats--zoom');
+
         for(let child of seatHost.children){
             child.classList.toggle('one-em');
             
             for(let notice of child.children){
                 notice.classList.toggle('theater--seat--popup');
                 notice.classList.toggle('theater--seat--popup--zoom');
-                //notice.style.add('color: green;');
-            }
-            
+            }    
         }
         (zoomBtn.innerText == '+') ? zoomBtn.innerText = '-' : zoomBtn.innerText = '+';
     }
