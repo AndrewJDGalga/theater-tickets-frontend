@@ -34,7 +34,6 @@ const genSeats = ({seatClass, column, row})=>{
                 } else { 
                     activeSeat.style.display = (activeSeat.style.display === 'block') ? 'none' : 'block';
                 }
-                //popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
             }
 
             seatsFrag.append(seat);
@@ -54,11 +53,13 @@ window.onload = () =>{
         seatHost.classList.toggle('double-em');
         for(let child of seatHost.children){
             child.classList.toggle('one-em');
-            /*
+            
             for(let notice of child.children){
-                notice.classList.toggle('double-em');
+                notice.classList.toggle('theater--seat--popup');
+                notice.classList.toggle('theater--seat--popup--zoom');
+                //notice.style.add('color: green;');
             }
-            */
+            
         }
         (zoomBtn.innerText == '+') ? zoomBtn.innerText = '-' : zoomBtn.innerText = '+';
     }

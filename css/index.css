@@ -69,6 +69,21 @@ html, body {
   width: var(--popup-width);
   color: white;
   background-color: black;
+  z-index: 1;
+}
+.theater .theater--seat--popup--zoom {
+  display: none;
+  position: absolute;
+  font-size: 1.5rem;
+  padding: 8px;
+  top: calc(-1 * var(--popup-width) * 1.5);
+  left: calc(-1 * var(--popup-width) / 1.5);
+  border: 1px solid grey;
+  border-radius: 8px;
+  width: 8rem;
+  color: white;
+  background-color: black;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=index.css.map */
