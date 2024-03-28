@@ -1,7 +1,6 @@
 :root {
   --theater-row: 0;
   --theater-col: 0;
-  --popup-width: 4rem;
 }
 
 html, body {
@@ -70,9 +69,9 @@ html, body {
   display: none;
   position: absolute;
   z-index: 1;
-  width: var(--popup-width);
-  left: calc(-1 * var(--popup-width) / 2);
-  top: calc(-1 * var(--popup-width) * 1.2);
+  width: 6rem;
+  left: -3rem;
+  top: -5rem;
   font-size: 1.2rem;
   color: white;
   background-color: black;
@@ -85,8 +84,8 @@ html, body {
   position: absolute;
   z-index: 1;
   width: 8rem;
-  left: calc(-1 * var(--popup-width) / 1.5);
-  top: calc(-1 * var(--popup-width) * 1.5);
+  left: -2.6666666667rem;
+  top: -6rem;
   font-size: 1.5rem;
   color: white;
   background-color: black;

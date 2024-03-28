@@ -4,7 +4,12 @@ $light-green: #A1EF8B;
 $english-violet: #48435C;
 $charcol: #3E505B;
 
-@mixin popup_shared($width: var(--popup-width), $fontSize: 1.2rem, $top: calc(-1 * var(--popup-width)*1.2), $left: calc(-1 * var(--popup-width)/2)) {
+$popup-width: 6rem;
+$popup-width-zoom: 8rem;
+$popup-font: 1.2rem;
+$popup-font-zoom: 1.5rem;
+
+@mixin popup_shared($width: $popup-width, $fontSize: $popup-font, $top: -1 * ($popup-width - 1), $left: calc(-1 * $popup-width/2)) {
     border: 1px solid grey;
     border-radius: 8px;
     padding: 8px;
@@ -24,7 +29,6 @@ $charcol: #3E505B;
 :root {
     --theater-row: 0;
     --theater-col: 0;
-    --popup-width: 4rem;
 }
 
 html, body {
@@ -91,6 +95,6 @@ html, body {
         @include popup_shared();
     }
     .theater--seat--popup--zoom {
-        @include popup_shared($width: 4rem * 2, $fontSize: 1.5rem, $top: calc(-1 * var(--popup-width)*1.5), $left:calc(-1 * var(--popup-width)/1.5));
+        @include popup_shared($width: $popup-width-zoom, $fontSize: $popup-font-zoom, $top: -1 * ($popup-width-zoom - 2), $left: calc(-1 * $popup-width-zoom/3));
     }
 }

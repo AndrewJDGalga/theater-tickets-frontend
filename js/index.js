@@ -1,14 +1,11 @@
 const seatHost = document.querySelector('#theater--seats_host');
 const zoomBtn = document.querySelector('#theater--zoom');
 
-//const seatCount = 66;
-
 const seatCol = 11;
 const seatRow = 6;
 
 const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J'];
 
-let activePopup;
 const activeSeats = [];
 
 const popups = [];
@@ -27,6 +24,7 @@ const genSeats = ({seatClass, column, row})=>{
             popup.innerText = `Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`;
             popup.classList.add('theater--seat--popup');
 
+            //add popups to array for hover
             popups.push(popup);
             seat.dataset.popupIndex = popups.length -1;
 
@@ -36,8 +34,6 @@ const genSeats = ({seatClass, column, row})=>{
                 if(!activeSeats.includes(seat)){
                     seat.classList.toggle('selected-seat');
                     activeSeats.push(seat);
-
-
                 }else{
                     const index = activeSeats.findIndex((anySeat)=>anySeat===seat);
                     activeSeats[index].classList.toggle('selected-seat');
