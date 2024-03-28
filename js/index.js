@@ -11,6 +11,8 @@ const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J'];
 let activePopup;
 const activeSeats = [];
 
+const popups = [];
+
 const genSeats = ({seatClass, column, row})=>{
     const seatsFrag = document.createDocumentFragment();
     for(let y = 0; y < row; y++){
@@ -25,27 +27,28 @@ const genSeats = ({seatClass, column, row})=>{
             popup.innerText = `Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`;
             popup.classList.add('theater--seat--popup');
 
+            popups.push(popup);
+            seat.dataset.popupIndex = popups.length -1;
+
             seat.append(popup);
             
             seat.onclick = () => {
                 if(!activeSeats.includes(seat)){
                     seat.classList.toggle('selected-seat');
                     activeSeats.push(seat);
-                    console.log(activeSeats);
+
+
                 }else{
                     const index = activeSeats.findIndex((anySeat)=>anySeat===seat);
                     activeSeats[index].classList.toggle('selected-seat');
                     activeSeats.splice(index,1);
-                    console.log(activeSeats);
                 }
-
-                if(activePopup !== popup){
-                    (activePopup) && (activePopup.style.display = 'none');
-                    activePopup = popup;
-                    activePopup.style.display = 'block';
-                } else { 
-                    activePopup.style.display = (activePopup.style.display === 'block') ? 'none' : 'block';
-                }
+            }
+            seat.onmouseenter = () => {
+                popups[seat.dataset.popupIndex].style.display = 'block';
+            }
+            seat.onmouseleave = () => {
+                popups[seat.dataset.popupIndex].style.display = 'none';
             }
 
             seatsFrag.append(seat);
