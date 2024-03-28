@@ -8,7 +8,8 @@ const seatRow = 6;
 
 const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J'];
 
-let activeSeat, activePopup;
+let activePopup;
+const activeSeats = [];
 
 const genSeats = ({seatClass, column, row})=>{
     const seatsFrag = document.createDocumentFragment();
@@ -27,12 +28,15 @@ const genSeats = ({seatClass, column, row})=>{
             seat.append(popup);
             
             seat.onclick = () => {
-                if(activeSeat !== seat){
-                    (activePopup) && (activeSeat.classList.toggle('selected-seat'));
-                    activeSeat = seat;
-                    activeSeat.classList.toggle('selected-seat');
-                } else {
-                    activeSeat.classList.toggle('selected-seat');
+                if(!activeSeats.includes(seat)){
+                    seat.classList.toggle('selected-seat');
+                    activeSeats.push(seat);
+                    console.log(activeSeats);
+                }else{
+                    const index = activeSeats.findIndex((anySeat)=>anySeat===seat);
+                    activeSeats[index].classList.toggle('selected-seat');
+                    activeSeats.splice(index,1);
+                    console.log(activeSeats);
                 }
 
                 if(activePopup !== popup){
