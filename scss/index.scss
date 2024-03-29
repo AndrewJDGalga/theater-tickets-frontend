@@ -22,6 +22,8 @@ $popup-font-zoom: 1.5rem;
     top: $top;
     font-size: $fontSize;
 
+    pointer-events: none;
+
     color: white;
     background-color: black;
 }
