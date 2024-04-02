@@ -1,8 +1,9 @@
 const seatHost = document.querySelector('#theater--seats_host');
 const zoomBtn = document.querySelector('#theater--zoom');
 
-const movieShowtimeParent = document.querySelector('#movie--showtimes');
-const fictionalShowtimes = ['11:30 am', '12:30 pm', '3:30 pm', '4:30 pm', '7:30 pm', '8:30 pm'];
+const showtimeParent = document.querySelector('#movie--showtimes');
+const showtimes = ['11:30 am', '12:30 pm', '3:30 pm', '4:30 pm', '7:30 pm', '8:30 pm'];
+const showtimeDays = 5;
 
 const seatCol = 11;
 const seatRow = 6;
@@ -78,8 +79,31 @@ window.onload = () =>{
         (zoomBtn.innerText == '+') ? zoomBtn.innerText = '-' : zoomBtn.innerText = '+';
     }
 
+
     const showtimeFrag = document.createDocumentFragment();
     const testdate = new Date();
     const verifyTime = [testdate.getHours(), testdate.getMinutes()];
     console.log(verifyTime);
+/*
+<label for="movie--showtimes--31824"><span>Today</span> 3/18</label>
+        <select id="movie--showtimes--31824">
+            <option>11:30 am</option>
+            <option>12:30 pm</option>
+            <option>3:30 pm</option>
+            <option>4:30 pm</option>
+            <option>7:30 pm</option>
+            <option>8:30 pm</option>
+        </select> */
+    
+    for(let d = 0; d < showtimeDays; d++) {
+        const labelElement = document.createElement('label');
+        const selectElement = document.createElement('select');
+        for(let t = 0; t < showtimes.length; t++){
+            const timeElement = document.createElement('option');
+            selectElement.append(timeElement);
+        }
+        showtimeFrag.append(labelElement, selectElement);
+    }
+    showtimeParent.append(showtimeFrag);
+
 }
