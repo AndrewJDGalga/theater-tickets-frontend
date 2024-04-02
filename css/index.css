@@ -24,15 +24,18 @@ html {
 .theater #theater--zoom {
   font-size: 1.5rem;
   border-radius: 50%;
-  min-width: 48px;
-  min-height: 48px;
+  min-width: 56px;
+  min-height: 56px;
+  margin: 4px;
 }
 .theater .theater--screen--seats {
   overflow: auto;
+  width: min-content;
+  margin: 0 auto;
 }
 .theater .theater--screen {
   width: 90%;
-  height: 1rem;
+  height: 1em;
   background-color: black;
   margin: 8px auto;
   border-top-left-radius: 16px;
