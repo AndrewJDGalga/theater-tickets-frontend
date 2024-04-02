@@ -30,8 +30,9 @@ html {
 }
 .theater .theater--screen--seats {
   overflow: auto;
-  width: min-content;
+  width: max-content;
   margin: 0 auto;
+  padding: 36px;
 }
 .theater .theater--screen {
   width: 90%;

@@ -1,6 +1,9 @@
 const seatHost = document.querySelector('#theater--seats_host');
 const zoomBtn = document.querySelector('#theater--zoom');
 
+const movieShowtimeParent = document.querySelector('#movie--showtimes');
+const fictionalShowtimes = ['11:30 am', '12:30 pm', '3:30 pm', '4:30 pm', '7:30 pm', '8:30 pm'];
+
 const seatCol = 11;
 const seatRow = 6;
 
@@ -74,4 +77,9 @@ window.onload = () =>{
         }
         (zoomBtn.innerText == '+') ? zoomBtn.innerText = '-' : zoomBtn.innerText = '+';
     }
+
+    const showtimeFrag = document.createDocumentFragment();
+    const testdate = new Date();
+    const verifyTime = [testdate.getHours(), testdate.getMinutes()];
+    console.log(verifyTime);
 }
