@@ -81,6 +81,17 @@ window.onload = () =>{
 
 
     const showtimeFrag = document.createDocumentFragment();
+
+    const today = new Date();
+    const fiveDays = [];
+    for(let i = 0; i < 5; i++){
+        const day = new Date(today.getFullYear(), today.getMonth(), today.getDay()+i);
+        fiveDays.push(day);
+    }
+    //console.log(today.toLocaleDateString());
+    fiveDays.map((day)=>{
+        console.log(day.toLocaleDateString());
+    })
     
 /*
 <label for="movie--showtimes--31824"><span>Today</span> 3/18</label>
