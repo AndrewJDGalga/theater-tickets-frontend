@@ -18,29 +18,30 @@ const createSeat = (seatClass, row, col) => {
     seat.dataset.seatCol = col;
     return seat;
 }
+const createPopUp = (popupClass, row, col) => {
+    const popup = document.createElement('p');
+    popup.innerText = `Row ${col} Seat ${row}`;
+    popup.classList.add(popupClass);
+    return popup;
+}
 
 const genSeats = ({seatClass, column, row})=>{
     const seatsFrag = document.createDocumentFragment();
     for(let y = 0; y < row; y++){
         let col = rows[y];
         for(let x = 0; x < column; x++){
+            const seat = createSeat(seatClass, x+1, col);
+            popups.push(createPopUp('theater--seat--popup', x+1, col));
             /*
-            const seat = document.createElement('button');
-            seat.classList.add(seatClass);
-            seat.dataset.seatRow = x+1;
-            seat.dataset.seatCol = col;
-            */
-           const seat = createSeat(seatClass, x+1, col);
-
             const popup = document.createElement('p');
             popup.innerText = `Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`;
             popup.classList.add('theater--seat--popup');
+            */
 
             //add popups to array for hover
-            popups.push(popup);
+            //popups.push(popup);
             seat.dataset.popupIndex = popups.length -1;
-
-            seat.append(popup);
+            seat.append(popups[popups.length-1]);
             
             seat.onclick = () => {
                 if(!activeSeats.includes(seat)){
