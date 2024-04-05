@@ -88,10 +88,6 @@ window.onload = () =>{
         const day = new Date(today.getFullYear(), today.getMonth(), today.getDay()+i);
         fiveDays.push(day);
     }
-    //console.log(today.toLocaleDateString());
-    fiveDays.map((day)=>{
-        console.log(day.toLocaleDateString());
-    })
     
 /*
 <label for="movie--showtimes--31824"><span>Today</span> 3/18</label>
@@ -107,6 +103,10 @@ window.onload = () =>{
     for(let d = 0; d < showtimeDays; d++) {
         const selectElement = document.createElement('select');
         const labelElement = document.createElement('label');
+
+        selectElement.id = 'move--showtimes--' + d;
+        labelElement.htmlFor = selectElement.id;
+        labelElement.innerText = (d != 0) ? fiveDays[d].toLocaleDateString() : 'Today ' + fiveDays[d].toLocaleDateString();
         
         for(let t = 0; t < showtimes.length; t++){
             const timeElement = document.createElement('option');
