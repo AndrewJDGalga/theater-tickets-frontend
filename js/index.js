@@ -81,9 +81,7 @@ window.onload = () =>{
 
 
     const showtimeFrag = document.createDocumentFragment();
-    const testdate = new Date();
-    const verifyTime = [testdate.getHours(), testdate.getMinutes()];
-    console.log(verifyTime);
+    
 /*
 <label for="movie--showtimes--31824"><span>Today</span> 3/18</label>
         <select id="movie--showtimes--31824">
@@ -96,10 +94,12 @@ window.onload = () =>{
         </select> */
     
     for(let d = 0; d < showtimeDays; d++) {
-        const labelElement = document.createElement('label');
         const selectElement = document.createElement('select');
+        const labelElement = document.createElement('label');
+        
         for(let t = 0; t < showtimes.length; t++){
             const timeElement = document.createElement('option');
+            timeElement.innerText = showtimes[t];
             selectElement.append(timeElement);
         }
         showtimeFrag.append(labelElement, selectElement);
