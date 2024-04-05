@@ -1,28 +1,36 @@
 const seatHost = document.querySelector('#theater--seats_host');
 const zoomBtn = document.querySelector('#theater--zoom');
 
+const seatCol = 11;
+const seatRow = 6;
+const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J'];
+const activeSeats = [];
+const popups = [];
+
 const showtimeParent = document.querySelector('#movie--showtimes');
 const showtimes = ['11:30 am', '12:30 pm', '3:30 pm', '4:30 pm', '7:30 pm', '8:30 pm'];
 const showtimeDays = 5;
 
-const seatCol = 11;
-const seatRow = 6;
-
-const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J'];
-
-const activeSeats = [];
-
-const popups = [];
+const createSeat = (seatClass, row, col) => {
+    const seat = document.createElement('button');
+    seat.classList.add(seatClass);
+    seat.dataset.seatRow = row;
+    seat.dataset.seatCol = col;
+    return seat;
+}
 
 const genSeats = ({seatClass, column, row})=>{
     const seatsFrag = document.createDocumentFragment();
     for(let y = 0; y < row; y++){
         let col = rows[y];
         for(let x = 0; x < column; x++){
+            /*
             const seat = document.createElement('button');
             seat.classList.add(seatClass);
             seat.dataset.seatRow = x+1;
             seat.dataset.seatCol = col;
+            */
+           const seat = createSeat(seatClass, x+1, col);
 
             const popup = document.createElement('p');
             popup.innerText = `Row ${seat.dataset.seatCol} Seat ${seat.dataset.seatRow }`;
@@ -88,17 +96,6 @@ window.onload = () =>{
         const day = new Date(today.getFullYear(), today.getMonth(), today.getDay()+i);
         fiveDays.push(day);
     }
-    
-/*
-<label for="movie--showtimes--31824"><span>Today</span> 3/18</label>
-        <select id="movie--showtimes--31824">
-            <option>11:30 am</option>
-            <option>12:30 pm</option>
-            <option>3:30 pm</option>
-            <option>4:30 pm</option>
-            <option>7:30 pm</option>
-            <option>8:30 pm</option>
-        </select> */
     
     for(let d = 0; d < showtimeDays; d++) {
         const selectElement = document.createElement('select');
