@@ -45,6 +45,22 @@ html {
     font-size: 1em;
 }
 
+.movie--info {
+    .external--trailer {
+        width: 100%;
+        aspect-ratio: 16/9;
+        overflow: hidden;
+    }
+    #movie--trailer {
+        background-image: url('../data/DUNE-PART-TWO_hero.jpg');
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        aspect-ratio: 16/9;
+        cursor: pointer;
+    }
+}
+
 .theater{
     height: 60%;
     overflow: auto;

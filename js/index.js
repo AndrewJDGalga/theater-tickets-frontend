@@ -104,5 +104,4 @@ window.onload = () =>{
         showtimeFrag.append(labelElement, selectElement);
     }
     showtimeParent.append(showtimeFrag);
-
 }
