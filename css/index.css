@@ -3,7 +3,7 @@
   --theater-col: 0;
 }
 
-html {
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -28,6 +28,17 @@ html {
   width: 100%;
   aspect-ratio: 16/9;
   cursor: pointer;
+  border: none;
+}
+.movie--info #movie--trailer span {
+  display: inline-block;
+  color: transparent;
+  background-image: url("../data/playplay.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20%;
+  height: 20%;
 }
 
 .theater {
