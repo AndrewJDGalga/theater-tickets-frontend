@@ -84,7 +84,7 @@ window.onload = () =>{
     const today = new Date();
     const fiveDays = [];
     for(let i = 0; i < 5; i++){
-        const day = new Date(today.getFullYear(), today.getMonth(), today.getDay()+i);
+        const day = new Date(today.getFullYear(), today.getMonth(), today.getDate()+i);
         fiveDays.push(day);
     }
     
