@@ -16,7 +16,12 @@ html, body {
   font-size: 1em;
 }
 
+.hide {
+  display: none;
+}
+
 .movie--info .external--trailer {
+  /*display: inline-block;*/
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;

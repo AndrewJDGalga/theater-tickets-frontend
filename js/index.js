@@ -1,5 +1,6 @@
 const seatHost = document.querySelector('#theater--seats_host');
 const zoomBtn = document.querySelector('#theater--zoom');
+const trailerBtn = document.querySelector('#movie--trailer');
 
 const seatCol = 11;
 const seatRow = 6;
