@@ -20,8 +20,23 @@ html, body {
   display: none;
 }
 
+h1 {
+  text-align: center;
+  background-color: #48435C;
+  color: #A1EF8B;
+  margin: 0;
+  padding: 16px 0;
+}
+h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+  display: none;
+}
+
 .movie--info .external--trailer {
-  /*display: inline-block;*/
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
