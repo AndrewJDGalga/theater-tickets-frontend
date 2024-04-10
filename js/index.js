@@ -1,6 +1,7 @@
 const seatHost = document.querySelector('#theater--seats_host');
 const zoomBtn = document.querySelector('#theater--zoom');
 const trailerBtn = document.querySelector('#movie--trailer');
+const youtubeTrailer = document.querySelector('.external--trailer');
 
 const seatCol = 11;
 const seatRow = 6;
@@ -79,7 +80,6 @@ window.onload = () =>{
         (zoomBtn.innerText == '+') ? zoomBtn.innerText = '-' : zoomBtn.innerText = '+';
     }
 
-
     const showtimeFrag = document.createDocumentFragment();
 
     const today = new Date();
@@ -105,4 +105,9 @@ window.onload = () =>{
         showtimeFrag.append(labelElement, selectElement);
     }
     showtimeParent.append(showtimeFrag);
+}
+
+trailerBtn.onclick = ()=>{
+    youtubeTrailer.classList.remove('hide');
+    trailerBtn.classList.add('hide');
 }
