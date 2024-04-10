@@ -33,9 +33,21 @@ $popup-font-zoom: 1.5rem;
     --theater-col: 0;
 }
 
+.tsukimi-regular {
+    font-family: "Tsukimi Rounded", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 html, body {
     margin: 0;
     padding: 0;
+}
+
+body, button, select {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .double-em {
