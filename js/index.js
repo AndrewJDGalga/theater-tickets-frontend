@@ -1,8 +1,12 @@
+const hideClass = 'hide';
+const movieTitleBaseClass = 'movie--title--pop';
+const movieTitlePostClass = 'movie--title--post';
+
 const seatHost = document.querySelector('#theater--seats_host');
 const zoomBtn = document.querySelector('#theater--zoom');
 const trailerBtn = document.querySelector('#movie--trailer--access');
 const youtubeTrailer = document.querySelector('.external--trailer');
-const movieTitle = document.querySelector('.movie--title--pop');
+const movieTitle = document.getElementsByClassName(movieTitleBaseClass)[0];
 
 const seatCol = 11;
 const seatRow = 6;
@@ -109,8 +113,8 @@ window.onload = () =>{
 }
 
 trailerBtn.onclick = ()=>{
-    youtubeTrailer.classList.remove('hide');
-    movieTitle.classList.remove('movie--title--pop');
-    movieTitle.classList.add('movie--title--post');
-    trailerBtn.classList.add('hide');
+    youtubeTrailer.classList.remove(hideClass);
+    movieTitle.classList.remove(movieTitleBaseClass);
+    movieTitle.classList.add(movieTitlePostClass);
+    trailerBtn.classList.add(hideClass);
 }
