@@ -9,6 +9,11 @@
   font-style: normal;
 }
 
+body {
+  background-color: #48435C;
+  color: #D3F6DB;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -34,7 +39,6 @@ body, button, select {
 
 h1 {
   text-align: center;
-  background-color: #48435C;
   color: #A1EF8B;
   margin: 0;
   padding: 16px 0;
@@ -48,12 +52,10 @@ nav {
   display: none;
 }
 
-.movie--info .external--trailer {
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
+.movie--info .movie--trailer {
+  position: relative;
 }
-.movie--info #movie--trailer {
+.movie--info .movie--trailer #movie--trailer {
   background-image: url("../data/DUNE-PART-TWO_hero.jpg");
   background-position: center;
   background-size: cover;
@@ -62,7 +64,7 @@ nav {
   cursor: pointer;
   border: none;
 }
-.movie--info #movie--trailer span {
+.movie--info .movie--trailer #movie--trailer span {
   display: inline-block;
   color: transparent;
   background-image: url("../data/playplay.svg");
@@ -71,6 +73,25 @@ nav {
   background-repeat: no-repeat;
   width: 20%;
   height: 20%;
+}
+.movie--info .movie--trailer .external--trailer {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.movie--info .movie--trailer .movie--title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: max-content;
+  padding: 4px 8px;
+  margin: 0;
+  background-color: #48435C;
+  font-weight: 200;
+}
+.movie--info .movie--quickfacts {
+  display: flex;
+  justify-content: space-around;
 }
 
 .theater {

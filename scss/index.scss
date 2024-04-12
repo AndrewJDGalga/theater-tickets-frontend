@@ -39,6 +39,11 @@ $popup-font-zoom: 1.5rem;
     font-style: normal;
 }
 
+body {
+    background-color: $english-violet;
+    color:$lime-green;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -62,7 +67,6 @@ body, button, select {
 
 h1 {
     text-align: center;
-    background-color: $english-violet;
     color: $light-green;
     margin: 0;
     padding: 16px 0;
@@ -76,30 +80,48 @@ nav {
 }
 
 .movie--info {
-    .external--trailer {
-        width: 100%;
-        aspect-ratio: 16/9;
-        overflow: hidden;
-    }
-    #movie--trailer {
-        background-image: url('../data/DUNE-PART-TWO_hero.jpg');
-        background-position: center;
-        background-size: cover;
-        width: 100%;
-        aspect-ratio: 16/9;
-        cursor: pointer;
-        border: none;
+    .movie--trailer {
+        position: relative;
 
-        span {
-            display: inline-block;
-            color: transparent;
-            background-image: url('../data/playplay.svg');
+        #movie--trailer {
+            background-image: url('../data/DUNE-PART-TWO_hero.jpg');
             background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 20%;
-            height: 20%;
+            background-size: cover;
+            width: 100%;
+            aspect-ratio: 16/9;
+            cursor: pointer;
+            border: none;
+            span {
+                display: inline-block;
+                color: transparent;
+                background-image: url('../data/playplay.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 20%;
+                height: 20%;
+            }
         }
+        .external--trailer {
+            width: 100%;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+        .movie--title {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: max-content;
+            padding: 4px 8px;
+            margin: 0;
+            background-color: $english-violet;
+            font-weight: 200;
+        }
+    }
+    
+    .movie--quickfacts {
+        display: flex;
+        justify-content: space-around;
     }
 }
 
