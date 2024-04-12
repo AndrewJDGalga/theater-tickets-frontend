@@ -123,7 +123,6 @@ nav {
             text-align: center;
         }
     }
-
     .movie--quickfacts {
         display: flex;
         justify-content: space-around;
@@ -132,6 +131,14 @@ nav {
             font-weight: 400;
             margin-bottom: 4px;
         }
+        p {
+            margin-top: 0;
+        }
+    }
+    .movie--summary {
+        background-color: $lime-green;
+        color: $english-violet;
+        padding: 0 8px;
         p {
             margin: 0;
         }

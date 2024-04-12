@@ -103,6 +103,14 @@ nav {
   margin-bottom: 4px;
 }
 .movie--info .movie--quickfacts p {
+  margin-top: 0;
+}
+.movie--info .movie--summary {
+  background-color: #D3F6DB;
+  color: #48435C;
+  padding: 0 8px;
+}
+.movie--info .movie--summary p {
   margin: 0;
 }
 
