@@ -93,6 +93,13 @@ nav {
   display: flex;
   justify-content: space-around;
 }
+.movie--info .movie--quickfacts h3 {
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+.movie--info .movie--quickfacts p {
+  margin: 0;
+}
 
 .theater {
   height: 60%;

@@ -122,6 +122,14 @@ nav {
     .movie--quickfacts {
         display: flex;
         justify-content: space-around;
+
+        h3 {
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+        p {
+            margin: 0;
+        }
     }
 }
 
