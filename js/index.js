@@ -2,6 +2,7 @@ const seatHost = document.querySelector('#theater--seats_host');
 const zoomBtn = document.querySelector('#theater--zoom');
 const trailerBtn = document.querySelector('#movie--trailer--access');
 const youtubeTrailer = document.querySelector('.external--trailer');
+const movieTitle = document.querySelector('.movie--title--pop');
 
 const seatCol = 11;
 const seatRow = 6;
@@ -109,5 +110,7 @@ window.onload = () =>{
 
 trailerBtn.onclick = ()=>{
     youtubeTrailer.classList.remove('hide');
+    movieTitle.classList.remove('movie--title--pop');
+    movieTitle.classList.add('movie--title--post');
     trailerBtn.classList.add('hide');
 }

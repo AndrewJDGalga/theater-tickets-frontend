@@ -107,8 +107,8 @@ nav {
             aspect-ratio: 16/9;
             overflow: hidden;
         }
-        /*
-        .movie--title {
+        
+        .movie--title--pop {
             position: absolute;
             bottom: 0;
             right: 0;
@@ -117,11 +117,12 @@ nav {
             margin: 0;
             background-color: $english-violet;
             font-weight: 200;
-        }*/
-    }
-
-    .movie--title {
-        text-align: center;
+        }
+        .movie--title--post {
+            font-weight: 200;
+            margin: 0;
+            text-align: center;
+        }
     }
 
     .movie--quickfacts {
