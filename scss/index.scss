@@ -83,7 +83,7 @@ nav {
     .movie--trailer {
         position: relative;
 
-        #movie--trailer {
+        #movie--trailer--access {
             background-image: url('../data/DUNE-PART-TWO_hero.jpg');
             background-position: center;
             background-size: cover;
@@ -118,7 +118,7 @@ nav {
             font-weight: 200;
         }
     }
-    
+
     .movie--quickfacts {
         display: flex;
         justify-content: space-around;
