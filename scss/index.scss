@@ -143,6 +143,16 @@ nav {
             margin: 0;
         }
     }
+    #expand--movie--summary {
+        background-color: $lime-green;
+        color: $english-violet;
+        border: none;
+        margin: 0;
+        font-size: large;
+        padding: 0.5rem;
+        font-weight: 600;
+        box-shadow: 0 2px 4px $light-green;
+    }
 }
 
 .theater{

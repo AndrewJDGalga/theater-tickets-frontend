@@ -113,6 +113,16 @@ nav {
 .movie--info .movie--summary p {
   margin: 0;
 }
+.movie--info #expand--movie--summary {
+  background-color: #D3F6DB;
+  color: #48435C;
+  border: none;
+  margin: 0;
+  font-size: large;
+  padding: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 2px 4px #A1EF8B;
+}
 
 .theater {
   height: 60%;
