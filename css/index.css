@@ -54,6 +54,17 @@ nav {
 
 .movie--info .movie--trailer {
   position: relative;
+  /*
+  .movie--title {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: max-content;
+      padding: 4px 8px;
+      margin: 0;
+      background-color: $english-violet;
+      font-weight: 200;
+  }*/
 }
 .movie--info .movie--trailer #movie--trailer--access {
   background-image: url("../data/DUNE-PART-TWO_hero.jpg");
@@ -79,15 +90,8 @@ nav {
   aspect-ratio: 16/9;
   overflow: hidden;
 }
-.movie--info .movie--trailer .movie--title {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: max-content;
-  padding: 4px 8px;
-  margin: 0;
-  background-color: #48435C;
-  font-weight: 200;
+.movie--info .movie--title {
+  text-align: center;
 }
 .movie--info .movie--quickfacts {
   display: flex;
