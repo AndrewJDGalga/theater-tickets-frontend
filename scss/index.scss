@@ -65,6 +65,7 @@ body, button, select {
     display: none;
 }
 
+
 h1 {
     text-align: center;
     color: $light-green;
@@ -143,6 +144,13 @@ nav {
             margin: 0;
         }
     }
+
+    .movie--summary--btn_host {
+        width: 100%;
+        min-height: max-content;
+        overflow: hidden;
+    }
+    
     #expand--movie--summary {
         background-color: $lime-green;
         color: $english-violet;
@@ -152,6 +160,11 @@ nav {
         padding: 0.5rem;
         font-weight: 600;
         box-shadow: 0 2px 4px $light-green;
+
+        /*
+        position: relative;
+        */
+        float: right;
     }
 }
 

@@ -113,6 +113,11 @@ nav {
 .movie--info .movie--summary p {
   margin: 0;
 }
+.movie--info .movie--summary--btn_host {
+  width: 100%;
+  min-height: max-content;
+  overflow: hidden;
+}
 .movie--info #expand--movie--summary {
   background-color: #D3F6DB;
   color: #48435C;
@@ -122,6 +127,10 @@ nav {
   padding: 0.5rem;
   font-weight: 600;
   box-shadow: 0 2px 4px #A1EF8B;
+  /*
+  position: relative;
+  */
+  float: right;
 }
 
 .theater {
