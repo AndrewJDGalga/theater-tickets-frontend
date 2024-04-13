@@ -127,10 +127,15 @@ nav {
   padding: 0.5rem;
   font-weight: 600;
   box-shadow: 0 2px 4px #A1EF8B;
-  /*
-  position: relative;
-  */
   float: right;
+}
+
+.movie--showtimes .movie--showtimes--title {
+  margin: 0;
+}
+.movie--showtimes .movie--showtimes--container {
+  display: flex;
+  justify-content: space-around;
 }
 
 .theater {

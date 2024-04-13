@@ -150,7 +150,7 @@ nav {
         min-height: max-content;
         overflow: hidden;
     }
-    
+
     #expand--movie--summary {
         background-color: $lime-green;
         color: $english-violet;
@@ -160,11 +160,17 @@ nav {
         padding: 0.5rem;
         font-weight: 600;
         box-shadow: 0 2px 4px $light-green;
-
-        /*
-        position: relative;
-        */
         float: right;
+    }
+}
+
+.movie--showtimes {
+    .movie--showtimes--title {
+        margin: 0;
+    }
+    .movie--showtimes--container {
+        display: flex;
+        justify-content: space-around;
     }
 }
 

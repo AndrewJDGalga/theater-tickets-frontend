@@ -14,7 +14,7 @@ const rows = ['A', 'B', 'C', 'D', 'E', 'F', 'G','H','I','J'];
 const activeSeats = [];
 const popups = [];
 
-const showtimeParent = document.querySelector('#movie--showtimes');
+const showtimeParent = document.querySelector('.movie--showtimes--container');
 const showtimes = ['11:30 am', '12:30 pm', '3:30 pm', '4:30 pm', '7:30 pm', '8:30 pm'];
 const showtimeDays = 5;
 
@@ -95,6 +95,7 @@ window.onload = () =>{
     }
     
     for(let d = 0; d < showtimeDays; d++) {
+        const dayTimeContainer = document.createElement('div');
         const selectElement = document.createElement('select');
         const labelElement = document.createElement('label');
 
@@ -107,7 +108,8 @@ window.onload = () =>{
             timeElement.innerText = showtimes[t];
             selectElement.append(timeElement);
         }
-        showtimeFrag.append(labelElement, selectElement);
+        dayTimeContainer.append(labelElement, selectElement);
+        showtimeFrag.append(dayTimeContainer);
     }
     showtimeParent.append(showtimeFrag);
 }
