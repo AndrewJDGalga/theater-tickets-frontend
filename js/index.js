@@ -106,6 +106,15 @@ window.onload = () =>{
         labelElement.innerText = (d != 0) ? fiveDays[d].toLocaleDateString() : 'Today ' + fiveDays[d].toLocaleDateString();
         (d != 0) ? selectElement.classList.add('hide') : selectElement.classList.add('active-showtime');
 
+        selectElement.onclick = () => {
+            const currentActive = document.getElementsByClassName('active-showtime')[0];
+            currentActive.classList.remove('active-showtime');
+            currentActive.classList.add('hide');
+
+            selectElement.classList.add('active-showtime');
+            selectElement.classList.remove('hide');
+        }
+
         
         for(let t = 0; t < showtimes.length; t++){
             const timeElement = document.createElement('option');
