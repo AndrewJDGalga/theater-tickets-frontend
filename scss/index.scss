@@ -21,11 +21,9 @@ $popup-font-zoom: 1.5rem;
     left: $left;
     top: $top;
     font-size: $fontSize;
-
     pointer-events: none;
-
-    color: white;
-    background-color: black;
+    color: $english-violet;
+    background-color: $lime-green;
 }
 
 :root {
@@ -177,7 +175,7 @@ nav {
 .theater{
     height: 60%;
     overflow: auto;
-    border: 4px solid black;
+    border: 4px solid $lime-green;
 
     #theater--zoom {
         font-size: 1.5rem;
@@ -185,6 +183,9 @@ nav {
         min-width: 56px;
         min-height: 56px;
         margin: 4px;
+        background-color: $charcol;
+        border-color: $lime-green;
+        color: $lime-green;
     }
     .theater--screen--seats {
         overflow: auto;
@@ -195,7 +196,7 @@ nav {
     .theater--screen {
         width: 90%;
         height: 1em;
-        background-color: black;
+        background-color: $lime-green;
         margin: 8px auto;
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
@@ -211,9 +212,6 @@ nav {
     .theater--seats {
         width: fit-content;
         margin: 0 auto;
-
-        background-color: pink;
-
         display: grid;
         grid-template-columns: repeat(var(--theater-col), 2em);
         grid-template-rows: repeat(var(--theater-row), 2em);
@@ -228,9 +226,11 @@ nav {
         width: 2em;
         height: 2em;
         margin: auto auto;
+        background-color: $charcol;
+        border-color: $lime-green;
     }
     .selected-seat {
-        background-color: black;
+        background-color: $light-green;
     }
     .theater--seat--popup {
         @include popup_shared();
