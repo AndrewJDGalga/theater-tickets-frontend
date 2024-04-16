@@ -100,8 +100,12 @@ window.onload = () =>{
         const labelElement = document.createElement('label');
 
         selectElement.id = 'move--showtimes--' + d;
+
         labelElement.htmlFor = selectElement.id;
+        
         labelElement.innerText = (d != 0) ? fiveDays[d].toLocaleDateString() : 'Today ' + fiveDays[d].toLocaleDateString();
+        (d != 0) ? selectElement.classList.add('hide') : selectElement.classList.add('active-showtime');
+
         
         for(let t = 0; t < showtimes.length; t++){
             const timeElement = document.createElement('option');
@@ -112,19 +116,20 @@ window.onload = () =>{
         showtimeFrag.append(dayTimeContainer);
     }
     showtimeParent.append(showtimeFrag);
-}
 
-trailerBtn.onclick = ()=>{
-    youtubeTrailer.classList.remove(hideClass);
-    movieTitle.classList.remove(movieTitleBaseClass);
-    movieTitle.classList.add(movieTitlePostClass);
-    trailerBtn.classList.add(hideClass);
-}
-
-const summeryBtn = document.querySelector('#expand--movie--summary');
-const hiddenParagraphs = document.getElementsByClassName('summery-block');
-summeryBtn.onclick = () => {
-    for(let i = 0; i < hiddenParagraphs.length; i++) {
-        hiddenParagraphs[i].classList.toggle('hide');
+    trailerBtn.onclick = ()=>{
+        youtubeTrailer.classList.remove(hideClass);
+        movieTitle.classList.remove(movieTitleBaseClass);
+        movieTitle.classList.add(movieTitlePostClass);
+        trailerBtn.classList.add(hideClass);
+    }
+    
+    const summeryBtn = document.querySelector('#expand--movie--summary');
+    const hiddenParagraphs = document.getElementsByClassName('summery-block');
+    summeryBtn.onclick = () => {
+        for(let i = 0; i < hiddenParagraphs.length; i++) {
+            hiddenParagraphs[i].classList.toggle('hide');
+        }
     }
 }
+
