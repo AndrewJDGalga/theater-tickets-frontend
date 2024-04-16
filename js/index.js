@@ -120,3 +120,11 @@ trailerBtn.onclick = ()=>{
     movieTitle.classList.add(movieTitlePostClass);
     trailerBtn.classList.add(hideClass);
 }
+
+const summeryBtn = document.querySelector('#expand--movie--summary');
+const hiddenParagraphs = document.getElementsByClassName('summery-block');
+summeryBtn.onclick = () => {
+    for(let i = 0; i < hiddenParagraphs.length; i++) {
+        hiddenParagraphs[i].classList.toggle('hide');
+    }
+}
