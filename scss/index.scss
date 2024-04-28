@@ -24,6 +24,10 @@ body {
     background-color: $english-violet;
     color:$lime-green;
 }
+.fullscreen {
+    max-width: 1200px;
+    margin: auto auto;
+}
 
 html, body {
     margin: 0;
@@ -120,7 +124,7 @@ nav {
     .movie--summary {
         background-color: $lime-green;
         color: $english-violet;
-        padding: 0 8px;
+        padding: 8px;
         p {
             margin: 0;
         }
@@ -183,6 +187,7 @@ nav {
     height: 60%;
     overflow: auto;
     border: 4px solid $lime-green;
+    max-width: min(576px, 100%);
 
     #theater--zoom {
         font-size: 1.5rem;
@@ -284,5 +289,13 @@ nav {
     .theater {
         float: right;
         width: 48%;
+    }
+}
+@media (min-width: 1200px) {
+    .movie--info .movie--summary .summery-block {
+        display: block;
+    }
+    .movie--summary--btn_host {
+        display: none;
     }
 }

@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1><a href="" class="tsukimi-regular">Pop Picture Palace</a></h1>
+        <h1><a href="#" class="tsukimi-regular">Pop Picture Palace</a></h1>
         <nav>
             <ul>
                 <li><a href="">Home</a></li>
@@ -21,46 +21,48 @@
             </ul>
         </nav>
     </header>
-    <section class="movie--info">
-        <div class="movie--trailer">
-            <button id="movie--trailer--access"><span>Play</span></button>
-            <iframe width="100%" height="100%" class="external--trailer hide" src="https://www.youtube.com/embed/sAofMZ_Zgbs?si=S6WVA3bsE0SPzp21" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h2 class="movie--title--pop">DUNE: PART 2</h2>
-        </div>
-        <div class="movie--quickfacts">
-            <div class="movie--rating">
-                <h3>Rated</h3>
-                <p>PG-13</p>
+    <main class="fullscreen">
+        <section class="movie--info">
+            <div class="movie--trailer">
+                <button id="movie--trailer--access"><span>Play</span></button>
+                <iframe width="100%" height="100%" class="external--trailer hide" src="https://www.youtube.com/embed/sAofMZ_Zgbs?si=S6WVA3bsE0SPzp21" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h2 class="movie--title--pop">DUNE: PART 2</h2>
             </div>
-            <h3 class="movie--runtime">166 min</h3>
-            <h3 class="movie--year">2024</h3>
-        </div>
-        <div class="movie--summary">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, perspiciatis voluptas? Esse quisquam iure, voluptatum non iusto consectetur in quidem fugiat, error illo modi enim laborum necessitatibus dolore, omnis ipsum.</p>
-            <p class="summery-block hide">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, perspiciatis voluptas? Esse quisquam iure, voluptatum non iusto consectetur in quidem fugiat, error illo modi enim laborum necessitatibus dolore, omnis ipsum.</p>
-            <p class="summery-block hide">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, perspiciatis voluptas? Esse quisquam iure, voluptatum non iusto consectetur in quidem fugiat, error illo modi enim laborum necessitatibus dolore, omnis ipsum.</p>
-        </div>
-        <div class="movie--summary--btn_host">
-            <button id="expand--movie--summary">Read More</button>
-        </div>
-    </section>
-    <section class="movie--showtimes">
-        <h2 class="movie--showtimes--title">SHOWTIMES</h2>
-        <div class="movie--showtimes--container">
-            
-        </div>
-    </section>
-    <section class="theater">
-        <div class="theater--screen--seats">
-                <div class="theater--screen"></div>
-                <div class="theater--screen--label">
-                    <p>^</p>
-                    <p>screen</p>
+            <div class="movie--quickfacts">
+                <div class="movie--rating">
+                    <h3>Rated</h3>
+                    <p>PG-13</p>
                 </div>
-            <div id="theater--seats_host" class="theater--seats"></div>
-        </div>
-        <button id="theater--zoom">+</button>
-    </section>
+                <h3 class="movie--runtime">166 min</h3>
+                <h3 class="movie--year">2024</h3>
+            </div>
+            <div class="movie--summary">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, perspiciatis voluptas? Esse quisquam iure, voluptatum non iusto consectetur in quidem fugiat, error illo modi enim laborum necessitatibus dolore, omnis ipsum.</p>
+                <p class="summery-block hide">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, perspiciatis voluptas? Esse quisquam iure, voluptatum non iusto consectetur in quidem fugiat, error illo modi enim laborum necessitatibus dolore, omnis ipsum.</p>
+                <p class="summery-block hide">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, perspiciatis voluptas? Esse quisquam iure, voluptatum non iusto consectetur in quidem fugiat, error illo modi enim laborum necessitatibus dolore, omnis ipsum.</p>
+            </div>
+            <div class="movie--summary--btn_host">
+                <button id="expand--movie--summary">Read More</button>
+            </div>
+        </section>
+        <section class="movie--showtimes">
+            <h2 class="movie--showtimes--title">SHOWTIMES</h2>
+            <div class="movie--showtimes--container">
+                
+            </div>
+        </section>
+        <section class="theater">
+            <div class="theater--screen--seats">
+                    <div class="theater--screen"></div>
+                    <div class="theater--screen--label">
+                        <p>^</p>
+                        <p>screen</p>
+                    </div>
+                <div id="theater--seats_host" class="theater--seats"></div>
+            </div>
+            <button id="theater--zoom">+</button>
+        </section>
+    </main>
     <script src="js/index.js"></script>
 </body>
 </html>
