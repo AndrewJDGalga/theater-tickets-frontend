@@ -240,4 +240,15 @@ nav {
   z-index: 1;
 }
 
+@media (min-width: 576px) {
+  .movie--showtimes {
+    text-align: left;
+  }
+  .movie--showtimes .movie--showtimes--container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */
