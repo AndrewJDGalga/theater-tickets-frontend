@@ -48,14 +48,16 @@ const genSeats = ({seatClass, column, row})=>{
         let col = rows[y];
         for(let x = 0; x < column; x++){
             const seat = createSeat(seatClass, x+1, col);
+            seat.onclick = () => setSeatActive(seat);
 
+            /*
             popups.push(createPopUp('theater--seat--popup', x+1, col));
 
             seat.dataset.popupIndex = popups.length -1;
             seat.append(popups[popups.length-1]);
             seat.onclick = () => setSeatActive(seat);
             seat.onmouseenter = () => popups[seat.dataset.popupIndex].style.display = 'block';
-            seat.onmouseleave = () => popups[seat.dataset.popupIndex].style.display = 'none';
+            seat.onmouseleave = () => popups[seat.dataset.popupIndex].style.display = 'none';*/
 
             seatsFrag.append(seat);
         }

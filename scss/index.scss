@@ -164,7 +164,7 @@ nav {
 
 .movie--showtimes {
     text-align: center;
-    
+
     .movie--showtimes--title {
         margin: 0;
     }
@@ -251,12 +251,37 @@ nav {
         border-color: $lime-green;
     }
     .selected-seat {
+        /*position: relative;*/
         background-color: $light-green;
     }
+    .selected-seat::after {
+        display: block;
+        position: absolute;
+        content: "row " attr(data-seat-col) " + seat " attr(data-seat-row);
+        /*top: -4em;*/
+        /*left: -50%;*/
+        /*transform: translateX(-50%);*/
+        top: -200%;
+        left: -4em;
+        width: 8em;
+        height: 1.5em;
+        padding: 8px;
+        background-color: $lime-green;
+        font-size: $popup-font;
+        border: 1px solid grey;
+        border-radius: 8px;
+        pointer-events: none;
+        opacity: 75%;
+    }
+    .selected-seat:hover::after {
+        /*opacity: 70%;*/
+        /*visibility: hidden;*/
+    }
+    /*
     .theater--seat--popup {
         @include popup_shared();
     }
     .theater--seat--popup--zoom {
         @include popup_shared($width: $popup-width-zoom, $fontSize: $popup-font-zoom, $top: -1 * ($popup-width-zoom - 2), $left: calc(-1 * $popup-width-zoom/3));
-    }
+    }*/
 }
