@@ -250,5 +250,22 @@ nav {
     flex-wrap: wrap;
   }
 }
+@media (min-width: 992px) {
+  .movie--info {
+    float: left;
+    width: 48%;
+  }
+  .movie--showtimes {
+    float: right;
+    width: 48%;
+  }
+  .movie--showtimes--container {
+    flex-direction: column;
+  }
+  .theater {
+    float: right;
+    width: 48%;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
