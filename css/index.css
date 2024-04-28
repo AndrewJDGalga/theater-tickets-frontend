@@ -130,6 +130,9 @@ nav {
   float: right;
 }
 
+.movie--showtimes {
+  text-align: center;
+}
 .movie--showtimes .movie--showtimes--title {
   margin: 0;
 }
