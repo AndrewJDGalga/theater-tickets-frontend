@@ -154,6 +154,9 @@ nav {
   box-shadow: 0 0 10px 100px black inset;
   background-color: #A1EF8B !important;
 }
+.movie--showtimes .movie--showtimes--container label, .movie--showtimes .movie--showtimes--container select {
+  font-size: 1rem;
+}
 .movie--showtimes .movie--showtimes--container select[id^=movie--showtimes--] {
   margin-left: 8px;
 }
@@ -162,13 +165,6 @@ nav {
   height: 60%;
   overflow: auto;
   border: 4px solid #D3F6DB;
-  /*
-  .theater--seat--popup {
-      @include popup_shared();
-  }
-  .theater--seat--popup--zoom {
-      @include popup_shared($width: $popup-width-zoom, $fontSize: $popup-font-zoom, $top: -1 * ($popup-width-zoom - 2), $left: calc(-1 * $popup-width-zoom/3));
-  }*/
 }
 .theater #theater--zoom {
   font-size: 1.5rem;
@@ -223,31 +219,25 @@ nav {
   border-color: #D3F6DB;
 }
 .theater .selected-seat {
-  /*position: relative;*/
   background-color: #A1EF8B;
 }
 .theater .selected-seat::after {
   display: block;
   position: absolute;
   content: "row " attr(data-seat-col) " + seat " attr(data-seat-row);
-  /*top: -4em;*/
-  /*left: -50%;*/
-  /*transform: translateX(-50%);*/
   top: -200%;
   left: -4em;
   width: 8em;
   height: 1.5em;
   padding: 8px;
   background-color: #D3F6DB;
+  color: black; /*violating palette consistency for readability*/
   font-size: 1.2rem;
   border: 1px solid grey;
   border-radius: 8px;
   pointer-events: none;
   opacity: 75%;
-}
-.theater .selected-seat:hover::after {
-  /*opacity: 70%;*/
-  /*visibility: hidden;*/
+  z-index: 1;
 }
 
 /*# sourceMappingURL=index.css.map */
