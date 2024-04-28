@@ -135,14 +135,10 @@ nav {
 }
 .movie--showtimes .movie--showtimes--container {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  /*
-  .active-showtime:focus,
-  .active-showtime:active {
-      /*border-color: $light-green;*/
-  /*outline: $light-green;*/
-  /*border: none;
-  }*/
+  gap: 8px;
+  margin-bottom: 8px;
 }
 .movie--showtimes .movie--showtimes--container .active-showtime {
   background-color: #D3F6DB;
@@ -154,6 +150,9 @@ nav {
 .movie--showtimes .movie--showtimes--container .active-showtime option:checked {
   box-shadow: 0 0 10px 100px black inset;
   background-color: #A1EF8B !important;
+}
+.movie--showtimes .movie--showtimes--container select[id^=movie--showtimes--] {
+  margin-left: 8px;
 }
 
 .theater {

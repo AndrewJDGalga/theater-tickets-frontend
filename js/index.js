@@ -99,7 +99,7 @@ window.onload = () =>{
         const selectElement = document.createElement('select');
         const labelElement = document.createElement('label');
 
-        selectElement.id = 'move--showtimes--' + d;
+        selectElement.id = 'movie--showtimes--' + d;
 
         labelElement.htmlFor = selectElement.id;
         

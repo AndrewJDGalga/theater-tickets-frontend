@@ -168,12 +168,14 @@ nav {
     }
     .movie--showtimes--container {
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
+        gap: 8px;
+        margin-bottom: 8px;
 
         .active-showtime {
             background-color: $lime-green;
             color: $english-violet;
-
             border: none;
             outline: none;
 
@@ -183,13 +185,9 @@ nav {
                 background-color: $light-green !important;
             }
         }
-        /*
-        .active-showtime:focus,
-        .active-showtime:active {
-            /*border-color: $light-green;*/
-            /*outline: $light-green;*/
-            /*border: none;
-        }*/
+        select[id^="movie--showtimes--"] {
+            margin-left: 8px;
+        }
     }
 }
 
