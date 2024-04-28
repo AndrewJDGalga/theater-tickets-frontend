@@ -169,6 +169,27 @@ nav {
     .movie--showtimes--container {
         display: flex;
         justify-content: space-around;
+
+        .active-showtime {
+            background-color: $lime-green;
+            color: $english-violet;
+
+            border: none;
+            outline: none;
+
+            option:hover,
+            option:checked {
+                box-shadow: 0 0 10px 100px black inset;
+                background-color: $light-green !important;
+            }
+        }
+        /*
+        .active-showtime:focus,
+        .active-showtime:active {
+            /*border-color: $light-green;*/
+            /*outline: $light-green;*/
+            /*border: none;
+        }*/
     }
 }
 

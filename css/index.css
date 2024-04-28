@@ -136,6 +136,24 @@ nav {
 .movie--showtimes .movie--showtimes--container {
   display: flex;
   justify-content: space-around;
+  /*
+  .active-showtime:focus,
+  .active-showtime:active {
+      /*border-color: $light-green;*/
+  /*outline: $light-green;*/
+  /*border: none;
+  }*/
+}
+.movie--showtimes .movie--showtimes--container .active-showtime {
+  background-color: #D3F6DB;
+  color: #48435C;
+  border: none;
+  outline: none;
+}
+.movie--showtimes .movie--showtimes--container .active-showtime option:hover,
+.movie--showtimes .movie--showtimes--container .active-showtime option:checked {
+  box-shadow: 0 0 10px 100px black inset;
+  background-color: #A1EF8B !important;
 }
 
 .theater {
